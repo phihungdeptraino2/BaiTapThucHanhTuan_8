@@ -1,0 +1,46 @@
+.customer-info {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-badge.new {
+  background-color: #e0f3ff;
+  color: #007bff;
+}
+
+.status-badge.in-progress {
+  background-color: #fff4e5;
+  color: #ff9800;
+}
+
+.status-badge.completed {
+  background-color: #e6f9f0;
+  color: #00c853;
+}
+
+.table-wrapper {
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Cụ thể nếu nav hoặc container có class đặc biệt */
+.rdt_Pagination {
+  height: 30px;
+}
