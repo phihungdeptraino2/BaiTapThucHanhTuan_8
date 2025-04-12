@@ -1,7 +1,7 @@
 import "../styles/HeaderStyle.css";
 import { Bell } from "lucide-react";
 import { ShieldQuestion } from "lucide-react";
-import avatar from "../assets/avatar.png";
+import avatar from "../assets/avatar1.png";
 const Header = () => {
   return (
     <div className="header">
