@@ -6,13 +6,14 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import OverView from "./components/OverView.jsx";
 import DetailedReport from "./components/DetailedReport.jsx";
+import { Routes } from "react-router-dom";
 function App() {
   return (
     <div className="grid-container">
       <Sidebar />
       <main className="main-content">
         <Header />
-        <OverView></OverView>
+        <OverView />
         <DetailedReport />
       </main>
     </div>

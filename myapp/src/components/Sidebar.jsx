@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/SidebarStyle.css";
 import {
   LayoutDashboard,
@@ -8,17 +7,16 @@ import {
   MessageSquare,
   Code,
 } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
-  const [select, setSelect] = useState(0);
-
   const navs = [
-    { label: "Dashboard", icon: <LayoutDashboard /> },
-    { label: "Projects", icon: <Folder /> },
-    { label: "Teams", icon: <Users /> },
-    { label: "Analytics", icon: <PieChart /> },
-    { label: "Messages", icon: <MessageSquare /> },
-    { label: "Integrations", icon: <Code /> },
+    { label: "Dashboard", icon: <LayoutDashboard />, path: "/" },
+    { label: "Projects", icon: <Folder />, path: "/projects" },
+    { label: "Teams", icon: <Users />, path: "/teams" },
+    { label: "Analytics", icon: <PieChart />, path: "/analytics" },
+    { label: "Messages", icon: <MessageSquare />, path: "/messages" },
+    { label: "Integrations", icon: <Code />, path: "/integrations" },
   ];
 
   return (
@@ -26,14 +24,14 @@ const Sidebar = () => {
       <h2 className="logo">Logo</h2>
       <ul>
         {navs.map((item, index) => (
-          <li
-            key={index}
-            className={select === index ? "active" : ""}
-            onClick={() => setSelect(index)}
-          >
-            <span className="icon">{item.icon}</span>
-            <span className="label">{item.label}</span>
-          </li>
+          <NavLink key={index} to={item.path} end>
+            {({ isActive }) => (
+              <li className={isActive ? "active" : ""}>
+                <span className="icon">{item.icon}</span>
+                <span className="label">{item.label}</span>
+              </li>
+            )}
+          </NavLink>
         ))}
       </ul>
       <img src="/sidebarimage.png" alt="anh lo go" width="200" />

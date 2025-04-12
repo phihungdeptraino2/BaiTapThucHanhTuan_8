@@ -12,6 +12,17 @@ ul {
   list-style: none;
   padding: 20px;
 }
+
+nav .logo {
+  color: black;
+}
+
+nav img {
+  width: 80%;
+  padding: 20px;
+  border-radius: 30px;
+  margin-top: 65px;
+}
 nav li {
   cursor: pointer;
   border-radius: 8px;
@@ -20,21 +31,24 @@ nav li {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-nav .logo {
+  text-decoration: none;
   color: black;
 }
+nav li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
 nav li:hover {
   background-color: pink;
 }
+
 nav li.active {
   background-color: palevioletred;
   color: white;
-}
-nav img {
-  width: 80%;
-  padding: 20px;
-  border-radius: 30px;
-  margin-top: 65px;
 }
